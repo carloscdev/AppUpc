@@ -9,6 +9,9 @@
     background-size: 100%;
     background-position: bottom center;
     background-repeat: no-repeat;
+    @media screen and (max-width:768px){
+        background-size: 150%;
+    }
     .navbar{
         @include contenedor;        
         div{
@@ -19,6 +22,13 @@
                 width: calc(5px + 5vw);
             }
         }
+        @media screen and (max-width:768px){
+            div {
+                img {
+                    width: calc(15px + 10vw);
+                }
+            }
+        }
     }
     .hero {
         @include contenedor;
@@ -26,7 +36,7 @@
         grid-template-columns: 1fr 0.8fr;
         grid-column-gap: 5vw;
         align-items: center;
-        margin-top: 6vw;
+        padding-top: 6vw;
         &__imagen {
             position: relative;
             max-width: 100%;        
@@ -55,8 +65,48 @@
         position: relative;
         .flecha{
             position: absolute;
-            bottom: -10vw;
+            bottom: -9vw;
             left: 0;
+        }
+        @media screen and (max-width:768px){
+            .flecha{     
+                position: relative;         
+                width: 15%;
+                margin: 0 auto;
+                padding-top: 6vw;
+                bottom: 0;
+            }
+            width: 100%;
+            padding-top: 0;
+           
+            grid-template-columns: 1fr;
+            grid-row-gap: 12vw;
+            grid-template-areas: "primero"
+                                " segundo";
+            &__imagen{
+                grid-area: primero;
+                height: 45vh;
+                background-image: url("../img/cellupc.png");
+                background-size: 145%;
+                background-position: top center;
+                img {
+                    display: none;
+                }
+            }
+            &__texto {
+                @include contenedor;
+                grid-area: segundo;
+                &--separador {
+                    margin: 6vw 0;
+                }
+                &--descarga {
+                    margin-top: 6vw;
+                    img {
+                        width: 49%;
+                    }
+                }
+            }
+     
         }
     }
 }
@@ -82,6 +132,19 @@
             &__imagen{
                 img {
                     width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:768px){       
+        padding-top: 15vw;
+        &__slider {     
+            .sliderGrid{
+                width: 100%;
+                grid-template-columns: 1fr;
+                grid-row-gap: 12vw;
+                div:last-child {
+                    @include contenedor;
                 }
             }
         }
@@ -126,6 +189,26 @@
             margin-bottom: 3vw;
         }
     }
+    @media screen and (max-width:768px){
+        background-size: 150%;
+        padding-top: 15vw;
+            .sliderGrid{
+                @include contenedor;
+                div:last-child {
+                    width: 100%;
+                }
+            }
+        .sliderGrid__img{     
+            text-align: right;       
+            &--1{                
+                top: 10vw;
+                width: 60%;                
+            }
+            &--2{
+                width: 75%;                  
+            }
+        }
+    }
 }
 .interface {
     padding-top: 12vw;
@@ -146,6 +229,19 @@
             }
         }
     }
+    @media screen and (max-width:768px){
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+        background-size: 150%;
+        &__contenedor {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-row-gap: 12vw;
+            &--texto {
+                @include contenedor;
+            }
+        }
+    }
 }
 .descarga {    
     text-align: center;
@@ -160,6 +256,18 @@
             padding: 6vw 0;
         }
     }    
+    @media screen and (max-width:768px){
+        padding-top: 15vw;
+        &__contenedor{
+            @include contenedor;
+            &--tienda {
+                padding: 12vw 0;
+                img:first-child{
+                    margin-bottom: 6vw;
+                }
+            }
+        }  
+    }
 }
 .footer{
     background-color: var(--negroLight);
@@ -183,6 +291,35 @@
             text-align: right;
             h5 {
                 margin: 0;
+            }
+        }
+    }
+    @media screen and (max-width:768px){
+        &__contenedor{
+            padding: 12vw 0;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-row-gap: 6vw;
+            grid-template-areas: "primero"
+                                "segundo tercero";
+            &--texto{
+                grid-area: primero;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+            &--imagen{
+                grid-area: segundo;
+                grid-row-start: 2;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            &--upc{
+                grid-area: tercero;
+                grid-row-start: 2;
+                grid-column-start: 2;
+                grid-column-end: 3;
             }
         }
     }

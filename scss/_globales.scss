@@ -21,11 +21,22 @@ p {
 .gris {
     color: var(--grisLight);
 }
+
+/* Configuración Slider Boostrap */
 .sliderCirculo{
     background-color: var(--grisLight) !important;
     border-radius: 50%;    
     width: 1vw !important;
     height: 1vw !important;    
+    @media screen and (max-width:768px){
+        width: 3vw !important;
+        height: 3vw !important;
+    }
+}
+@media screen and (max-width:768px){
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
+    }
 }
 .carousel-indicators{
     margin: 0 !important;
