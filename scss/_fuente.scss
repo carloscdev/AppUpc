@@ -1,6 +1,6 @@
 /* Fuente */
 /* Gothic A1 Fuente */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://www.upc.edu.pe/static/css/fonts-familiy.css');
 
 @font-face {
     font-family: "Nunito";
@@ -9,11 +9,12 @@
     font-weight: 400;
     font-style: regular;
 }
-/* @font-face {
-    font-family: "BebasNeue";
-    src: url("../fuente/BebasNeue-Bold.ttf")
-        format("truetype");
-    font-weight: 700;
-    font-style: bold;
-}
- */
+@font-face {
+    font-family: 'solano_gothic_mvb_stdBd';
+	src: url('/static/fonts/solanogothicmvbstdbd-webfont.eot');
+	src: url('/static/fonts/solanogothicmvbstdbd-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('/static/fonts/solanogothicmvbstdbd-webfont.woff') format('woff'),
+	     url('/static/fonts/solanogothicmvbstdbd-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

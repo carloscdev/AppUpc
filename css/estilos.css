@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Variables */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://www.upc.edu.pe/static/css/fonts-familiy.css");
 :root {
   --rojo: #D50000;
   --blanco: #ffffff;
@@ -8,7 +8,7 @@
   --negroLight: #222222;
   --gris: #707070;
   --grisLight: #797979;
-  --titulo: calc(1rem + 1.7vw);
+  --titulo: calc(1rem + 2.8vw);
   --parrafo: calc(1rem + 0.1vw); }
 
 /* Fuente */
@@ -19,14 +19,13 @@
   font-weight: 400;
   font-style: regular; }
 
-/* @font-face {
-    font-family: "BebasNeue";
-    src: url("../fuente/BebasNeue-Bold.ttf")
-        format("truetype");
-    font-weight: 700;
-    font-style: bold;
-}
- */
+@font-face {
+  font-family: 'solano_gothic_mvb_stdBd';
+  src: url("/static/fonts/solanogothicmvbstdbd-webfont.eot");
+  src: url("/static/fonts/solanogothicmvbstdbd-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/solanogothicmvbstdbd-webfont.woff") format("woff"), url("/static/fonts/solanogothicmvbstdbd-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /* Mixins */
 /* Globales */
 * {
@@ -38,7 +37,7 @@ body {
 
 h1, h2 {
   font-weight: 700;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'solano_gothic_mvb_stdBd', sans-serif;
   font-size: var(--titulo); }
 
 p {
