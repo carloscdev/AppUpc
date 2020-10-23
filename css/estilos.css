@@ -48,6 +48,9 @@ p {
 .rojo {
   color: var(--rojo); }
 
+.gris {
+  color: var(--grisLight); }
+
 .sliderCirculo {
   background-color: var(--grisLight) !important;
   border-radius: 50%;
@@ -103,7 +106,7 @@ p {
 
 /* Información - 1er Slider */
 .informacion {
-  padding: 9vw 0;
+  padding-top: 12vw;
   background-image: url("../img/bg-2.svg");
   background-size: cover;
   background-position: bottom center;
@@ -118,8 +121,6 @@ p {
     margin-bottom: 50px; }
     .informacion__slider .sliderGrid p {
       margin: 3vw 0; }
-    .informacion__slider .sliderGrid h2 {
-      color: var(--grisLight); }
     .informacion__slider .sliderGrid__imagen img {
       width: 100%; }
 
@@ -129,7 +130,7 @@ p {
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 9vw 0; }
+  padding-top: 12vw; }
   .noticias h2 {
     text-align: center;
     width: 80%;
@@ -154,3 +155,53 @@ p {
     text-align: left;
     width: 100%;
     margin-bottom: 3vw; }
+
+.interface {
+  padding-top: 12vw;
+  padding-bottom: 12vw;
+  background-image: url("../img/bg-5.svg");
+  background-size: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat; }
+  .interface__contenedor {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    grid-column-gap: 5vw;
+    align-items: center; }
+    .interface__contenedor--imagen img {
+      width: 100%; }
+
+.descarga {
+  text-align: center;
+  padding-top: 6vw;
+  background-image: url("../img/bg-6.svg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat; }
+  .descarga__contenedor {
+    width: 80%;
+    margin: 0 auto; }
+    .descarga__contenedor--tienda {
+      padding: 6vw 0; }
+
+.footer {
+  background-color: var(--negroLight); }
+  .footer__contenedor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3vw 0;
+    color: var(--white);
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr; }
+    .footer__contenedor--texto {
+      text-align: center; }
+      .footer__contenedor--texto span a {
+        color: var(--white);
+        text-decoration: underline; }
+    .footer__contenedor--upc {
+      text-align: right; }
+      .footer__contenedor--upc h5 {
+        margin: 0; }

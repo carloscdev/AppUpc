@@ -56,7 +56,7 @@
 }
 /* Información - 1er Slider */
 .informacion {
-    padding: 9vw 0;
+    padding-top: 12vw;
     background-image: url("../img/bg-2.svg");
     background-size: cover;
     background-position: bottom center;
@@ -72,9 +72,7 @@
             p{
                 margin: 3vw 0;
             }
-            h2{
-                color: var(--grisLight);
-            }
+   
             &__imagen{
                 img {
                     width: 100%;
@@ -90,7 +88,7 @@
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
-    padding: 9vw 0;
+    padding-top: 12vw;
     h2{
         text-align: center;
         @include contenedor;
@@ -120,6 +118,66 @@
             text-align: left;
             width: 100%;
             margin-bottom: 3vw;
+        }
+    }
+}
+.interface {
+    padding-top: 12vw;
+    padding-bottom: 12vw;
+    background-image: url("../img/bg-5.svg");
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    &__contenedor{
+        @include contenedor;
+        display: grid;
+        grid-template-columns: 0.9fr 1fr;
+        grid-column-gap: 5vw;
+        align-items: center;
+        &--imagen{
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.descarga {    
+    text-align: center;
+    padding-top: 6vw;
+    background-image: url("../img/bg-6.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    &__contenedor{
+        @include contenedor;
+        &--tienda {
+            padding: 6vw 0;
+        }
+    }    
+}
+.footer{
+    background-color: var(--negroLight);
+    &__contenedor{
+        @include contenedor;
+        padding: 3vw 0;
+        color: var(--white);
+        align-items: center;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        &--texto {
+            text-align: center;
+            span{
+                a{
+                    color: var(--white);
+                    text-decoration: underline;
+                }
+            }
+        }
+        &--upc {
+            text-align: right;
+            h5 {
+                margin: 0;
+            }
         }
     }
 }
