@@ -84,7 +84,8 @@ p {
     grid-template-columns: 1fr 0.8fr;
     grid-column-gap: 5vw;
     align-items: center;
-    margin-top: 6vw; }
+    margin-top: 6vw;
+    position: relative; }
     .header .hero__imagen {
       position: relative;
       max-width: 100%; }
@@ -103,6 +104,10 @@ p {
       margin-top: 3vw; }
       .header .hero__texto--descarga img {
         width: 30%; }
+    .header .hero .flecha {
+      position: absolute;
+      bottom: -10vw;
+      left: 0; }
 
 /* Información - 1er Slider */
 .informacion {

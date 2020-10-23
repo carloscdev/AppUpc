@@ -52,6 +52,12 @@
                 }
             }
         }
+        position: relative;
+        .flecha{
+            position: absolute;
+            bottom: -10vw;
+            left: 0;
+        }
     }
 }
 /* Información - 1er Slider */
