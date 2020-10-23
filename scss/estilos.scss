@@ -1,0 +1,125 @@
+@import "./variables";
+@import "./fuente";
+@import "./mixins";
+@import "./globales";
+
+/* Header */
+.header{
+    background-image: url("../img/bg-1.svg");
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    .navbar{
+        @include contenedor;        
+        div{
+            padding: 3vw 0;
+            width: auto;
+            margin-left: auto;
+            img {
+                width: calc(5px + 5vw);
+            }
+        }
+    }
+    .hero {
+        @include contenedor;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        grid-column-gap: 5vw;
+        align-items: center;
+        margin-top: 6vw;
+        &__imagen {
+            position: relative;
+            max-width: 100%;        
+            img{
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: -20vw;
+                width: 100%;                
+            }
+        }
+        &__texto{
+            &--separador {
+                width: 30%;
+                height: 0.3rem;
+                margin: 3vw 0;
+                background-color: var(--rojo);
+            }
+            &--descarga {
+                margin-top: 3vw;
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+/* Información - 1er Slider */
+.informacion {
+    padding: 9vw 0;
+    background-image: url("../img/bg-2.svg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    &__slider {     
+        .sliderGrid{
+            @include contenedor;
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            align-items: center;
+            grid-column-gap: 5vw;
+            margin-bottom: 50px;
+            p{
+                margin: 3vw 0;
+            }
+            h2{
+                color: var(--grisLight);
+            }
+            &__imagen{
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Noticias */
+.noticias {
+    background-image: url("../img/bg-3.svg");
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 9vw 0;
+    h2{
+        text-align: center;
+        @include contenedor;
+        margin-bottom: 6vw;
+    }
+    .sliderGrid__img{
+        position: relative;
+        text-align: center;
+        &--1{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 5vw;
+            width: 40%;
+            opacity: 0.6;
+            z-index: 0;
+        }
+        &--2{
+            width: 55%;       
+            position: relative;
+            z-index: 1;
+      
+        }
+    }
+    .sliderGrid__texto{
+        h2{
+            text-align: left;
+            width: 100%;
+            margin-bottom: 3vw;
+        }
+    }
+}

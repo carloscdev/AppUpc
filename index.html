@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo Móvil">
+    <meta name="author" content="@UPCedu">
     <!--Open Graph - Facebook-->
     <meta property="og:title" content="Mi UPC App">
     <meta property="og:site_name" content="Mi UPC App">
@@ -19,11 +21,143 @@
     <meta name="twitter:title" content="Mi UPC App">
     <meta name="twitter:description" content="Aplicativo Móvil">
     <meta name="twitter:description" content="https://example.com/imagen.jpg">
+    <!--Icono-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!--Estilos CSS-->
-
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Mi Upc App</title>
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="navbar">
+            <div>
+                <img src="img/logo.png" class="logo" alt="Logo Upc">
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero__texto">
+                <h1 class="rojo">
+                    SIGUE EL PULSO A TU VIDA UNIVERSITARIA CON LA NUEVA MI UPC APP
+                </h1>
+                <div class="hero__texto--separador">
+
+                </div>
+                <p>
+                    Encuentra toda tu información académica y conoce las últimas 
+                    noticias y eventos de la UPC en tu celular. Descarga la nueva Mi UPC App
+                </p>
+                <div class="hero__texto--descarga">
+                    <a href="#"><img src="./img/app-store.svg" alt="App Store"></a>
+                    <a href="#"><img src="./img/play-store.svg" alt="Play Store"></a>
+                </div>
+            </div>
+            <div class="hero__imagen">
+                <img src="img/cellupc.png" alt="Celular UPC">
+            </div>
+        </section>        
+    </header>
+    <section class="informacion">
+        <div id="slider-home" class="carousel slide informacion__slider" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#slider-home" data-slide-to="0" class="active sliderCirculo"></li>
+              <li data-target="#slider-home" data-slide-to="1" class="sliderCirculo" ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="sliderGrid">
+                    <div class="sliderGrid__imagen">
+                        <img src="./img/cellupc3.PNG" alt="">
+                    </div>
+                    <div>
+                        <h2>ACCEDE A TU INFORMACIÓN DE MANERA MÁS RÁPIDA Y DIRECTA</h2>
+                        <p>Entérate de tus útlimas notas apenas ingreses a la primera pantalla.
+                            Lo mismo para ver tus próximas clases y tu nivel de asistencia.
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="sliderGrid">
+                    <div class="sliderGrid__imagen">
+                        <img src="./img/cellupc3.PNG" alt="">
+                    </div>
+                    <div>
+                        <h2>ACCEDE A TU INFORMACIÓN DE MANERA MÁS RÁPIDA Y DIRECTA</h2>
+                        <p>Entérate de tus útlimas notas apenas ingreses a la primera pantalla.
+                            Lo mismo para ver tus próximas clases y tu nivel de asistencia.
+                        </p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+    </section>
+    <section class="noticias">        
+        <div id="slider-home2" class="carousel slide informacion__slider" data-ride="carousel">
+            <h2 class="rojo">DISFRUTA DE LA NUEVA UPC MÓVIL ESTÉS DONDE ESTÉS</h2>
+            <ol class="carousel-indicators">
+              <li data-target="#slider-home2" data-slide-to="0" class="active sliderCirculo"></li>
+              <li data-target="#slider-home2" data-slide-to="1" class="sliderCirculo" ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="sliderGrid">
+                    <div class="sliderGrid__img">
+                        <img class="sliderGrid__img--1" src="./img/cellupc2.PNG" alt="">
+                        <img class="sliderGrid__img--2" src="./img/cellupc2.PNG" alt="">
+                    </div>
+                    <div class="sliderGrid__texto">
+                        <h2>MANTENTE AL TANTO DE LOS EVENTOS Y 
+                            ANUNCIOS QUE TE INTERESAN
+                        </h2>
+                        <p>
+                            Porque no todo se trata de avisos de asignaturas. 
+                            Te mostraremos más variedad de eventos y anuncios, tanto 
+                            académicos como extra-académicos.
+                            Explora y crece con los temas que más te importan
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="sliderGrid">
+                    <div class="sliderGrid__img">
+                        <img class="sliderGrid__img--1" src="./img/cellupc2.PNG" alt="">
+                        <img class="sliderGrid__img--2" src="./img/cellupc2.PNG" alt="">
+                    </div>
+                    <div class="sliderGrid__texto">
+                        <h2>MANTENTE AL TANTO DE LOS EVENTOS Y 
+                            ANUNCIOS QUE TE INTERESAN
+                        </h2>
+                        <p>
+                            Porque no todo se trata de avisos de asignaturas. 
+                            Te mostraremos más variedad de eventos y anuncios, tanto 
+                            académicos como extra-académicos.
+                            Explora y crece con los temas que más te importan
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#slider-home2" role="button" data-slide="prev">
+                <img src="./img/left.svg" alt="Anterior">
+              </a>
+              <a class="carousel-control-next" href="#slider-home2" role="button" data-slide="next">
+                <img src="./img/right.svg" alt="Siguiente">
+              </a>
+            </div>
+
+          </div>
+
+    </section>
+   
+
+
+    <!--Script-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

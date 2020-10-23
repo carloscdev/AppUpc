@@ -1,0 +1,32 @@
+/* Globales */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Nunito";
+}
+h1, h2{
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    font-size: var(--titulo);
+}
+p {
+    font-weight: 400;
+    font-size: var(--parrafo);
+}
+.rojo {
+    color: var(--rojo);
+}
+.sliderCirculo{
+    background-color: var(--grisLight) !important;
+    border-radius: 50%;    
+    width: 1vw !important;
+    height: 1vw !important;    
+}
+.carousel-indicators{
+    margin: 0 !important;
+    .active {
+        background-color: var(--rojo) !important;
+    }
+}
