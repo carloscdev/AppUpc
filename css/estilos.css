@@ -8,11 +8,11 @@
   --negroLight: #222222;
   --gris: #707070;
   --grisLight: #797979;
-  --titulo: calc(1rem + 2.8vw);
+  --titulo: calc(1rem + 2.5vw);
   --parrafo: calc(1rem + 0.12vw); }
   @media screen and (max-width: 768px) {
     :root {
-      --titulo: calc(1rem + 7vw);
+      --titulo: calc(1rem + 6vw);
       --parrafo: calc(1rem + 0.1vw); } }
 
 /* Fuente */
@@ -87,7 +87,7 @@ p {
     width: 80%;
     margin: 0 auto; }
     .header .navbar div {
-      padding: 3vw 0;
+      padding-top: 3vw;
       width: auto;
       margin-left: auto; }
       .header .navbar div img {
@@ -99,10 +99,10 @@ p {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vw;
     align-items: center;
-    padding-top: 6vw;
+    padding-top: 3vw;
     position: relative; }
     .header .hero__imagen {
       position: relative;
@@ -111,7 +111,7 @@ p {
         position: absolute;
         right: 0;
         left: 0;
-        top: -20vw;
+        top: -25vw;
         width: 100%; }
     .header .hero__texto--separador {
       width: 30%;
@@ -124,23 +124,22 @@ p {
         width: 30%; }
     .header .hero .flecha {
       position: absolute;
-      bottom: -9vw;
-      left: 0; }
+      bottom: -6vw;
+      margin: 0 auto;
+      left: 0;
+      right: 0; }
     @media screen and (max-width: 768px) {
       .header .hero {
         width: 100%;
         padding-top: 0;
         grid-template-columns: 1fr;
-        grid-row-gap: 12vw;
-        grid-template-areas: "primero" " segundo"; }
+        grid-row-gap: 12vw; }
         .header .hero .flecha {
           position: relative;
-          width: 15%;
-          margin: 0 auto;
+          width: 13%;
           padding-top: 6vw;
           bottom: 0; }
         .header .hero__imagen {
-          grid-area: primero;
           height: 45vh;
           background-image: url("../img/cellupc.png");
           background-size: 145%;
@@ -149,8 +148,7 @@ p {
             display: none; }
         .header .hero__texto {
           width: 80%;
-          margin: 0 auto;
-          grid-area: segundo; }
+          margin: 0 auto; }
           .header .hero__texto--separador {
             margin: 6vw 0; }
           .header .hero__texto--descarga {
@@ -165,6 +163,11 @@ p {
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat; }
+  .informacion h2 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 6vw; }
   .informacion__slider .sliderGrid {
     width: 80%;
     margin: 0 auto;
@@ -173,22 +176,30 @@ p {
     align-items: center;
     grid-column-gap: 5vw;
     margin-bottom: 50px; }
+    .informacion__slider .sliderGrid h2 {
+      text-align: left;
+      width: 100%; }
     .informacion__slider .sliderGrid p {
       margin: 3vw 0; }
     .informacion__slider .sliderGrid__imagen img {
       width: 100%; }
   @media screen and (max-width: 768px) {
     .informacion {
-      padding-top: 15vw; }
+      padding-top: 15vw;
+      padding-bottom: 12vw; }
+      .informacion h2 {
+        margin-bottom: 12vw; }
       .informacion__slider .sliderGrid {
         width: 100%;
         grid-template-columns: 1fr;
         grid-row-gap: 12vw; }
         .informacion__slider .sliderGrid div:last-child {
           width: 80%;
-          margin: 0 auto; } }
+          margin: 0 auto; }
+        .informacion__slider .sliderGrid__texto {
+          min-height: 300px; } }
 
-/* Noticias */
+/* Noticias - 2do Slider */
 .noticias {
   background-image: url("../img/bg-3.svg");
   background-size: 100%;
@@ -205,14 +216,15 @@ p {
     text-align: center; }
     .noticias .sliderGrid__img--1 {
       position: absolute;
-      left: 0;
+      left: 3vw;
       bottom: 0;
       top: 5vw;
-      width: 40%;
+      width: 50%;
       opacity: 0.6;
       z-index: 0; }
     .noticias .sliderGrid__img--2 {
-      width: 55%;
+      width: 60%;
+      margin-left: 6vw;
       position: relative;
       z-index: 1; }
   .noticias .sliderGrid__texto h2 {
@@ -223,6 +235,8 @@ p {
     .noticias {
       background-size: 150%;
       padding-top: 15vw; }
+      .noticias h2 {
+        margin-bottom: 12vw; }
       .noticias .sliderGrid {
         width: 80%;
         margin: 0 auto; }
@@ -234,10 +248,12 @@ p {
           top: 10vw;
           width: 60%; }
         .noticias .sliderGrid__img--2 {
-          width: 75%; } }
+          width: 75%; }
+      .noticias .sliderGrid__texto {
+        min-height: 400px; } }
 
 .interface {
-  padding-top: 12vw;
+  padding-top: 9vw;
   padding-bottom: 12vw;
   background-image: url("../img/bg-5.svg");
   background-size: 100%;
@@ -255,7 +271,7 @@ p {
   @media screen and (max-width: 768px) {
     .interface {
       padding-top: 15vw;
-      padding-bottom: 15vw;
+      padding-bottom: 18vw;
       background-size: 150%; }
       .interface__contenedor {
         width: 100%;
@@ -272,11 +288,14 @@ p {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat; }
+  .descarga h2 {
+    margin-bottom: 0; }
   .descarga__contenedor {
     width: 80%;
     margin: 0 auto; }
     .descarga__contenedor--tienda {
-      padding: 6vw 0; }
+      padding-top: 3vw;
+      padding-bottom: 6vw; }
   @media screen and (max-width: 768px) {
     .descarga {
       padding-top: 15vw; }
@@ -305,14 +324,13 @@ p {
         text-decoration: underline; }
     .footer__contenedor--upc {
       text-align: right; }
-      .footer__contenedor--upc h5 {
+      .footer__contenedor--upc h2 {
         margin: 0; }
   @media screen and (max-width: 768px) {
     .footer__contenedor {
       padding: 12vw 0;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-row-gap: 6vw;
+      grid-row-gap: 9vw;
       grid-template-areas: "primero" "segundo tercero"; }
       .footer__contenedor--texto {
         grid-area: primero;
@@ -323,10 +341,12 @@ p {
       .footer__contenedor--imagen {
         grid-area: segundo;
         grid-row-start: 2;
+        grid-template-columns: 3;
         grid-column-start: 1;
         grid-column-end: 2; }
       .footer__contenedor--upc {
         grid-area: tercero;
         grid-row-start: 2;
+        grid-template-columns: 3;
         grid-column-start: 2;
         grid-column-end: 3; } }

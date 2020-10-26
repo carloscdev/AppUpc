@@ -15,7 +15,7 @@
     .navbar{
         @include contenedor;        
         div{
-            padding: 3vw 0;
+            padding-top: 3vw;
             width: auto;
             margin-left: auto;
             img {
@@ -33,18 +33,18 @@
     .hero {
         @include contenedor;
         display: grid;
-        grid-template-columns: 1fr 0.8fr;
+        grid-template-columns: 1fr 1fr;       
         grid-column-gap: 5vw;
         align-items: center;
-        padding-top: 6vw;
-        &__imagen {
+        padding-top: 3vw;
+        &__imagen {          
             position: relative;
             max-width: 100%;        
             img{
                 position: absolute;
                 right: 0;
                 left: 0;
-                top: -20vw;
+                top: -25vw;
                 width: 100%;                
             }
         }
@@ -65,14 +65,15 @@
         position: relative;
         .flecha{
             position: absolute;
-            bottom: -9vw;
+            bottom: -6vw;
+            margin: 0 auto;
             left: 0;
+            right: 0;
         }
         @media screen and (max-width:768px){
             .flecha{     
                 position: relative;         
-                width: 15%;
-                margin: 0 auto;
+                width: 13%;                
                 padding-top: 6vw;
                 bottom: 0;
             }
@@ -80,11 +81,9 @@
             padding-top: 0;
            
             grid-template-columns: 1fr;
-            grid-row-gap: 12vw;
-            grid-template-areas: "primero"
-                                " segundo";
+            grid-row-gap: 12vw;           
             &__imagen{
-                grid-area: primero;
+                
                 height: 45vh;
                 background-image: url("../img/cellupc.png");
                 background-size: 145%;
@@ -95,7 +94,7 @@
             }
             &__texto {
                 @include contenedor;
-                grid-area: segundo;
+                
                 &--separador {
                     margin: 6vw 0;
                 }
@@ -117,6 +116,11 @@
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
+    h2{
+        text-align: center;
+        @include contenedor;
+        margin-bottom: 6vw;
+    }
     &__slider {     
         .sliderGrid{
             @include contenedor;
@@ -125,6 +129,10 @@
             align-items: center;
             grid-column-gap: 5vw;
             margin-bottom: 50px;
+            h2{
+                text-align: left;
+                width: 100%;
+            }
             p{
                 margin: 3vw 0;
             }
@@ -138,6 +146,10 @@
     }
     @media screen and (max-width:768px){       
         padding-top: 15vw;
+        padding-bottom: 12vw;
+        h2{
+            margin-bottom: 12vw;
+        }
         &__slider {     
             .sliderGrid{
                 width: 100%;
@@ -146,12 +158,16 @@
                 div:last-child {
                     @include contenedor;
                 }
+                &__texto{                   
+                    min-height: 300px;
+                }
+            
             }
         }
     }
 }
 
-/* Noticias */
+/* Noticias - 2do Slider */
 .noticias {
     background-image: url("../img/bg-3.svg");
     background-size: 100%;
@@ -168,15 +184,16 @@
         text-align: center;
         &--1{
             position: absolute;
-            left: 0;
+            left: 3vw;
             bottom: 0;
             top: 5vw;
-            width: 40%;
+            width: 50%;
             opacity: 0.6;
             z-index: 0;
         }
         &--2{
-            width: 55%;       
+            width: 60%;
+            margin-left: 6vw;       
             position: relative;
             z-index: 1;
       
@@ -187,11 +204,15 @@
             text-align: left;
             width: 100%;
             margin-bottom: 3vw;
-        }
+        }    
     }
     @media screen and (max-width:768px){
         background-size: 150%;
         padding-top: 15vw;
+        
+        h2{
+            margin-bottom: 12vw;
+        }
             .sliderGrid{
                 @include contenedor;
                 div:last-child {
@@ -208,10 +229,13 @@
                 width: 75%;                  
             }
         }
+        .sliderGrid__texto{
+            min-height: 400px;
+        }
     }
 }
 .interface {
-    padding-top: 12vw;
+    padding-top: 9vw;
     padding-bottom: 12vw;
     background-image: url("../img/bg-5.svg");
     background-size: 100%;
@@ -231,7 +255,7 @@
     }
     @media screen and (max-width:768px){
         padding-top: 15vw;
-        padding-bottom: 15vw;
+        padding-bottom: 18vw;
         background-size: 150%;
         &__contenedor {
             width: 100%;
@@ -244,6 +268,9 @@
     }
 }
 .descarga {    
+    h2{
+        margin-bottom: 0;
+    }
     text-align: center;
     padding-top: 6vw;
     background-image: url("../img/bg-6.svg");
@@ -253,7 +280,8 @@
     &__contenedor{
         @include contenedor;
         &--tienda {
-            padding: 6vw 0;
+            padding-top: 3vw;
+            padding-bottom: 6vw;
         }
     }    
     @media screen and (max-width:768px){
@@ -289,7 +317,7 @@
         }
         &--upc {
             text-align: right;
-            h5 {
+            h2 {
                 margin: 0;
             }
         }
@@ -297,9 +325,8 @@
     @media screen and (max-width:768px){
         &__contenedor{
             padding: 12vw 0;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-row-gap: 6vw;
+            grid-template-columns: repeat(2, 1fr);            
+            grid-row-gap: 9vw;
             grid-template-areas: "primero"
                                 "segundo tercero";
             &--texto{
@@ -312,12 +339,14 @@
             &--imagen{
                 grid-area: segundo;
                 grid-row-start: 2;
+                grid-template-columns: 3;
                 grid-column-start: 1;
                 grid-column-end: 2;
             }
             &--upc{
                 grid-area: tercero;
                 grid-row-start: 2;
+                grid-template-columns: 3;
                 grid-column-start: 2;
                 grid-column-end: 3;
             }

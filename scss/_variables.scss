@@ -9,10 +9,10 @@
     --grisLight: #797979;
 
     //Tamaño de Letra
-    --titulo: calc(1rem + 2.8vw);
+    --titulo: calc(1rem + 2.5vw);
     --parrafo: calc(1rem + 0.12vw);
     @media screen and (max-width:768px) {
-        --titulo: calc(1rem + 7vw);
+        --titulo: calc(1rem + 6vw);
         --parrafo: calc(1rem + 0.1vw);
     }
 }
